@@ -7,15 +7,17 @@ function IsCreditValid(creditRating) {
   
   }
   
-  function ltv(downPayment , houseAppraisal) {
 
-    
+function ltv(downPayment , houseAppraisalValue) {
+
+    loanValue  = (1 - (downpayment/houseAppraisalValue)) * 100;
+
+    return loanValue <= 80, loanValue <= 95;
 
   }
   
 
 
-
-
+export default ltv;
 export default IsCreditValid;  
   
