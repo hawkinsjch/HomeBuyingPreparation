@@ -1,10 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, input } from 'react-native';
 
+const TEST_CREDIT_RATING = 600;
+
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>This is an app!</Text>
+      <Text>Credit Rating: {TEST_CREDIT_RATING}</Text>
+      <Text>Credit Rating Valid: </Text>
       <StatusBar style="auto" />
     </View>
   );
