@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, input } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import ApprovalFactors from "./approvalFactors";
 
 const TEST_CREDIT_RATING = 700,
