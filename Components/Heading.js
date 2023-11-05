@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     
     height: 100,
     marginTop: 50,
-    marginLeft: 30,
+    marginLeft: 0,
     width: 300,
     justifyContent: 'center',
     alignContent: 'center',
@@ -31,7 +31,8 @@ const styles = StyleSheet.create({
     fontSize: 40,
     justifyContent: 'center',
     marginLeft: 10,
-    color: '#05304d'
+    paddingBottom: 30,
+    color: '#FFFFFF'
 
   }
   
