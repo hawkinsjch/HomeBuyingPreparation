@@ -1,9 +1,4 @@
 import { StatusBar } from 'expo-status-bar';
-<<<<<<< Updated upstream
-import { StyleSheet, Text, View } from 'react-native';
-import ApprovalFactors from "./approvalFactors";
-
-=======
 import { StyleSheet, Text, View, input, Dimensions, ImageBackground} from 'react-native';
 import ApprovalFactors from "./approvalFactors";
 import Heading from './Components/Heading';
@@ -19,20 +14,8 @@ plug into terminal^^
 
 const screenHeight = Dimensions.get('window').height; 
 const screenWidth = Dimensions.get('window').width; 
->>>>>>> Stashed changes
-const TEST_CREDIT_RATING = 700,
-      TEST_DOWN_PAYMENT = 50,
-      TEST_HOME_APPRAISAL = 1000,
-      TEST_GROSS_INCOME = 100,
-      TEST_CAR_PAYMENT = 0, 
-      TEST_CREDIT_CARD_PAYMENT = 0, 
-      TEST_MORTGAGE = 30, 
-      TEST_STUDENT_LOANS = 0;
 
-<<<<<<< Updated upstream
-=======
       
->>>>>>> Stashed changes
 export default function App() {
   return (
     
@@ -56,19 +39,6 @@ function CodeToText(num) {
       return "Medium"
   }
 }
-
-<<<<<<< Updated upstream
-=======
-function callBack(data){
-
-  console.log(data);
-
-}
-
-
-
-
->>>>>>> Stashed changes
 
 
 const styles = StyleSheet.create({
@@ -99,3 +69,62 @@ const styles = StyleSheet.create({
     width: 100,
   
 }});
+
+function CreditDetermination (creditRating){
+  switch(creditRating) {
+
+    case BAD:
+      return "Credit Rating is subpar, here are some resources to build credit. https://www.nerdwallet.com/article/finance/how-to-build-credit "
+      break;
+    case GOOD:
+      return "Your credit score is satisfactory!"
+      break;
+  }
+}
+
+function LTVDetermination (loanValue){
+  switch(loanValue){
+  case GOOD:
+    return "Your loan-to-value(LTV) % is satisfactory!";
+    break;
+
+  case MEDIUM:
+    return "Your loan-to-value(LTV) % is a little above preferred LTV which will lead to a higher interest rate requiring a Private Mortgage Insurance which charges 1% of the home appraisal. For more information about PMI use this https://www.consumerfinance.gov/ask-cfpb/what-is-private-mortgage-insurance-en-122/.  Use this resource for strategies to save for a downpayment. https://www.53.com/content/fifth-third/en/financial-insights/personal/home-ownership/saving-strategies-first-home-down-payment.html"
+    break;
+  case BAD:
+    return "Your loan-to-value(LTV) % is unsatisfactory. Consider using this resource to budget and save for a bigger downpayment https://www.53.com/content/fifth-third/en/financial-insights/personal/home-ownership/saving-strategies-first-home-down-payment.html "
+    break;
+  }
+}
+function MortgageDebtDetermination (totalDebtToIncome , totalMortgageDebt) {
+
+    switch(totalMortgageDebt){
+
+      case GOOD:
+        return "Your Mortgage debt ratio is satisfactory!"
+        break;
+      
+      case BAD:
+        return "Your Mortgage debt ratio is unsatisfactory. Consider usng this resource that provide strategies to lower debt to income ratio. https://crosscountrymortgage.com/how-to-lower-debt-to-income-ratio/"
+
+
+    }
+}
+
+function debtToIncomeDetemination (totalDebtToIncome){
+
+  switch(totalDebtToIncome){
+
+    case GOOD:
+      return "Your total debt to income ratio is satisfactory!"
+      break;
+
+    case MEDIUM:
+      return "Your total debt to income ratio is a little risky. Use this resource to find some better mortgage rates. https://themortgagereports.com/65972/the-best-mortgage-rates-lender-rankings#loan-purpose. Use this resource for some low interest credit cards to transfer debt to https://www.nerdwallet.com/best/credit-cards/low-interest."
+    
+    case BAD:
+      return "Your total debt to income ratio is very risky. Use this resource to find some better mortgage rates. https://themortgagereports.com/65972/the-best-mortgage-rates-lender-rankings#loan-purpose. Use this resource for some low interest credit cards to transfer debt to https://www.nerdwallet.com/best/credit-cards/low-interest."
+    }
+  }
+
+
