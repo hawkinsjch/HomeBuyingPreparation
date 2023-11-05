@@ -7,9 +7,6 @@ const MEDIUM = 2
 
 function IsCreditValid(creditRating) {
 
-
-    creditArray = [];
-
     if(creditRating >= CREDIT_MINIMUM){
         return GOOD;
     }
@@ -29,7 +26,11 @@ function LTV(downPayment , houseAppraisalValue) {
         return GOOD;
     }
     else if(loanValue <= .95){
+        pmiHouseValueAdded = houseAppraisalValue + (houseAppraisalValue*.01)
         return MEDIUM;
+    }else if (loanValue <= 1.0){
+        pmiHouseValueAdded = houseAppraisalValue + (houseAppraisalValue*.01)
+        return BAD;
     }
     else {
         return BAD;

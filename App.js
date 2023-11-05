@@ -1,7 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, input } from 'react-native';
 import ApprovalFactors from "./approvalFactors";
-import { parse } from 'csv-parse';
 
 const TEST_CREDIT_RATING = 700,
       TEST_DOWN_PAYMENT = 50,
@@ -34,6 +33,8 @@ function CodeToText(num) {
       return "Medium"
   }
 }
+
+
 
 const styles = StyleSheet.create({
   container: {
