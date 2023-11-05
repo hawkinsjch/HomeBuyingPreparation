@@ -1,7 +1,25 @@
 import { StatusBar } from 'expo-status-bar';
+<<<<<<< Updated upstream
 import { StyleSheet, Text, View } from 'react-native';
 import ApprovalFactors from "./approvalFactors";
 
+=======
+import { StyleSheet, Text, View, input, Dimensions, ImageBackground} from 'react-native';
+import ApprovalFactors from "./approvalFactors";
+import Heading from './Components/Heading';
+import Information from './Components/Information';
+/*
+cd AwesomeProject
+npm install expo
+npm i react-native-chart-kit
+npx expo start
+
+plug into terminal^^
+*/
+
+const screenHeight = Dimensions.get('window').height; 
+const screenWidth = Dimensions.get('window').width; 
+>>>>>>> Stashed changes
 const TEST_CREDIT_RATING = 700,
       TEST_DOWN_PAYMENT = 50,
       TEST_HOME_APPRAISAL = 1000,
@@ -11,15 +29,20 @@ const TEST_CREDIT_RATING = 700,
       TEST_MORTGAGE = 30, 
       TEST_STUDENT_LOANS = 0;
 
+<<<<<<< Updated upstream
+=======
+      
+>>>>>>> Stashed changes
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Credit Rating: {TEST_CREDIT_RATING}</Text>
-      <Text>Credit Rating Valid: {CodeToText(ApprovalFactors.IsCreditValid(TEST_CREDIT_RATING))}</Text>
-      <Text>LTV: {CodeToText(ApprovalFactors.LTV(TEST_DOWN_PAYMENT, TEST_HOME_APPRAISAL))}</Text>
-      <Text>DTI: {CodeToText(ApprovalFactors.DTI(TEST_GROSS_INCOME, TEST_CAR_PAYMENT, TEST_CREDIT_CARD_PAYMENT, TEST_MORTGAGE, TEST_STUDENT_LOANS))}</Text>
-      <StatusBar style="auto" />
-    </View>
+    
+      <View style = {styles.container}>
+      <ImageBackground source={require('./assets/background.jpg')} resizeMode='cover' style = {styles.image}>
+         <Heading/>
+         <Information/>
+       </ImageBackground>
+       </View>
+  
   );
 }
 
@@ -34,13 +57,45 @@ function CodeToText(num) {
   }
 }
 
+<<<<<<< Updated upstream
+=======
+function callBack(data){
+
+  console.log(data);
+
+}
+
+
+
+
+>>>>>>> Stashed changes
 
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#F',
+    
   },
-});
+  image: {
+    justifyContent: 'center',
+    height: screenHeight,
+    width: screenWidth,
+    
+
+    
+  },
+  paragraph: {
+    margin: 24,
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  logo: {
+    flex: 1,
+    justifyContent: 'center',
+    height: 100,
+    width: 100,
+  
+}});
