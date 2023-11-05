@@ -18,6 +18,5 @@ function ltv(downPayment , houseAppraisalValue) {
   
 
 
-export default ltv;
-export default IsCreditValid;  
+export { IsCreditValid, ltv };  
   
