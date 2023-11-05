@@ -50,7 +50,7 @@ function DTI(grossIncome, carPayment , creditCardPayment , mortgage, studentLoan
     else if(totalDebtToIncome <= .36){
         return GOOD;
     }
-    else if (totalMortgageIncome <= .43){
+    else if (totalDebtToIncome <= .43){
         return MEDIUM;
     }
     else{
