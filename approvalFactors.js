@@ -40,7 +40,7 @@ function LTV(downPayment , houseAppraisalValue) {
 
 function DTI(grossIncome, carPayment , creditCardPayment , mortgage, studentLoans) {
 
-    totalDebtToIncome = (1-((carPayment + creditCardPayment + mortgage + studentLoans)/grossIncome));
+    totalDebtToIncome = ((carPayment + creditCardPayment + mortgage + studentLoans)/grossIncome);
 
     totalMortgageDebt = mortgage / grossIncome;
 
