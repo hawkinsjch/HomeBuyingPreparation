@@ -8,15 +8,20 @@ function IsCreditValid(creditRating) {
   }
   
 
-function ltv(downPayment , houseAppraisalValue) {
+function LTV(downPayment , houseAppraisalValue) {
 
-    loanValue  = (1 - (downpayment/houseAppraisalValue)) * 100;
+    loanValue  = (1 - (downPayment/houseAppraisalValue));
 
-    return loanValue <= 80, loanValue <= 95;
+    return loanValue <= .80, loanValue <= .95;
 
   }
-  
+
+function DTI(grossIncome, carPayment , creditCardPayment , mortgage) {
+
+    totalDebtToIncome = (1-((carPayment + creditCardPayment + mortgage)/grossIncome));
+
+}
 
 
-export { IsCreditValid, ltv };  
+export default { IsCreditValid, LTV , DTI };  
   
