@@ -1,1 +1,1 @@
-HackUTD fannie mae project of 2023
+A React Native / Expo application created for HackUTD 2023's Fannie Mae challenge. It evaluates financial inputs using mortgage-readiness calculations and provides contextual guidance.
